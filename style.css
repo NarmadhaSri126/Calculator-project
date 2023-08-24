@@ -1,147 +1,77 @@
 *{
- background-color: #63ffea;
-}
-body {
-   width: 500px;
-   margin: 4% auto;
-   font-family: 'Source Sans Pro', sans-serif;
-   letter-spacing: 5px;
-   font-size: 1.8rem;
-   -moz-user-select: none;
-   -webkit-user-select: none;
-   -ms-user-select: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
   
- }
- 
- .calculator {
-   padding: 20px;
-   -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
-   box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
-   border-radius: 1px;
-   position: relative;
-   background-color: white;
-   border-color: #000000;
-   
- }
- 
- .input {
-   border: 1px solid #ddd;
-   border-radius: 1px;
-   height: 60px;
-   padding-right: 15px;
-   padding-top: 10px;
-   text-align: right;
-   margin-right: 6px;
-   font-size: 2.5rem;
-   overflow-x: auto;
-   transition: all .2s ease-in-out;
-   background-color: white;
-   border-color: #000000;
- }
- 
- .input:hover {
-   border: 1px solid #bbb;
-   -webkit-box-shadow: inset 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
-   box-shadow: inset 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
- }
- 
- .buttons {
-   
- }
- 
- .operators {}
- .x{
-   position: absolute;
-   right: 20px;
-   background-color: white;
- }
- .operators div {
-   display: inline-block;
-   border: 1px solid;
-   border-color: #000000;
-   border-radius: 1px;
-   width: 80px;
-   text-align: center;
-   padding: 10px;
-   margin: 20px 4px 10px 0;
-   cursor: pointer;
-   background-color: white;
-   transition: border-color .2s ease-in-out, background-color .2s, box-shadow .2s;
- }
- 
- .operators div:hover {
-   background-color: pink;
-   -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
-   box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
-border-color: #bbb;
- }
- 
- .operators div:active {
-   font-weight: bold;
-   background-color: white;
+  font-family: sans-serif; 
+  outline: none; 
+  
+  /*background-position: pointer;*/
+}
 
- }
- 
- .leftPanel {
-   display: inline-block;
-   background-color: white;
- }
- 
- .numbers div {
-   display: inline-block;
-   border: 1px solid #ddd;
-   border-color: #000000;
-   border-radius: 1px;
-   width: 80px;
-   text-align: center;
-   padding: 10px;
-   margin: 10px 4px 10px 0;
-   cursor: pointer;
-   background-color: #f9f9f9;
-   transition: border-color .2s ease-in-out, background-color .2s, box-shadow .2s;
- }
- 
- .numbers div:hover {
-   background-color: pink;
-   -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
-   box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
-   border-color: #bbb;
- }
- 
- .numbers div:active {
-   font-weight: bold;
- }
- 
- div.equal {
-   display: inline-block;
-   border: 1px solid;
-   border-radius: 1px;
-   width: 75%;
-   text-align: center;
-   padding: 127px 10px;
-   margin: 10px 6px 10px 0;
-   vertical-align: top;
-   cursor: pointer;
-   color:black;
-   background-color:rgb(247, 243, 25);
-   transition: all .2s ease-in-out;
-   border-color: #000000;
-   position: absolute;
-  bottom: 20px;
-  right: 20px;
-  width: 75px;
-  height: 23px;
- }
- 
- div.equal:hover {
-   background-color:rgb(252, 248, 6);
-   -webkit-box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
-   box-shadow: 0px 1px 4px 0px rgba(0, 0, 0, 0.2);
-   border-color: #bbb;
- }
- 
- div.equal:active {
-   font-weight: bold;
-   color: #000000;
+body {
+    background-image: url(images/i%20love%20maths.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.calculator{
+    background-color: #ecf0f3;
+    padding: 15px;
+    border-radius: 30px;
+    box-shadow: inset 5px 5px 12px #ffffff,
+                      5px 5px 12px rgba(0, 0, 0, .16);
+    display: grid;
+    grid-template-columns: repeat(4,68px);
 
- }
+}
+input{
+    grid-column: span 4;
+    height: 70px;
+    width: 260px;
+    background-color: gray;
+    box-shadow: inset  -5px -5px 12px gray, inset 5px 5px 12px rgba(0,0,0,.16);
+    border: none;
+    border-radius: 30px;
+    color: rgb(70,70,70);
+    font-size: 50px;
+    text-align: end;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 30px;
+    padding: 20px;
+}
+button{
+    height: 48px;
+    width: 48px;
+    background-color: #ecf0f3;
+    box-shadow: -5px -5px 12px gray,  5px 5px 12px rgba(0,0,0,.16);
+    border: none;
+    border-radius: 50%;
+    margin: 8px;
+    font-size: 16px;
+}
+.equal{
+    width: 115px;
+    border-radius: 40px;
+    background-color:gray;
+    box-shadow: -5px -5px 12px gray,  5px 5px 12px rgba(0,0,0,.16);
+}
+ input{
+    color: #ffffff;
+}
+
+
+@media only screen and (max-width: 600px) {
+    body {
+        background-image: url(images/I\ love\ Maths.!.png);
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center;
+    }
